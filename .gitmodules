@@ -1,0 +1,9 @@
+[submodule "cyclopsDemo_inst1"]
+	path = cyclopsDemo_inst1
+	url = git@github.com:ucb-cyarp/cyclopsDemo.git
+[submodule "cyclopsDemo_inst2"]
+	path = cyclopsDemo_inst2
+	url = git@github.com:ucb-cyarp/cyclopsDemo.git
+[submodule "cpuTopology"]
+	path = cpuTopology
+	url = git@github.com:ucb-cyarp/cpuTopology.git
