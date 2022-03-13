@@ -27,15 +27,16 @@ python3 $scriptSrc/cpuTopology/cpuTopologyInfo.py > cpuTopology.txt
 #Run the demos
 cd $scriptSrc/cyclopsDemo_inst1/build
 ./runDemoAndCollectResultsSharedMemory.sh $resultsDir/instance1 &
-#From https://stackoverflow.com/questions/1908610/how-to-get-process-id-of-background-process
-instance1PID=$1
+instance1PID=$!
 
 cd $scriptSrc/cyclopsDemo_inst2/build
-./runDemoAndCollectResultsSharedMemory.sh $resultsDir/instance1 &
-instance2PID=$1
+./runDemoAndCollectResultsSharedMemory.sh $resultsDir/instance2 &
+instance2PID=$!
 
 cd $oldDir
 
+instancePIDs=( "${instance1PID}" "${instance2PID}" )
+
 #From https://stackoverflow.com/questions/356100/how-to-wait-in-bash-for-several-subprocesses-to-finish-and-return-exit-code-0
-wait $instance1PID
-wait $instance2PID
+echo "Instance PIDs: ${instancePIDs[*]}"
+wait "${instancePIDs[@]}"
