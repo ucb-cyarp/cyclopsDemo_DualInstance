@@ -1,4 +1,6 @@
 # cyclopsDemo_DualInstance
+Zenodo Concept DOI: [![Concept DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6526193.svg)](https://doi.org/10.5281/zenodo.6526193)
+
 Dual Instance Demo (Running 2 Complete Cyclops Demos on 1 System Simultaniously)
 
 ---
